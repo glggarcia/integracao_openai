@@ -4,9 +4,10 @@ on: [pull_request, push]
 
 jobs:
   phpunit:
-    runs-on: ubuntu-22.04
+    name: Run Tests
+    runs-on: ubuntu-latest
     container:
-      image: kirschbaumdevelopment/laravel-test-runner:8.1
+      image: kirschbaumdevelopment/laravel-test-runner:8.2
 
     services:
       mysql:
