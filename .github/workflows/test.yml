@@ -34,10 +34,5 @@ jobs:
           cp .env.ci .env
           php artisan key:generate
 
-      - name: Prepare Front End Assets
-        run: |
-          npm install
-          npm run dev
-
       - name: Run Teste Suite
         run: php artisan test
